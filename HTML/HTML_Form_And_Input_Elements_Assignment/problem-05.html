@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout & Delivery - TechMart Online Store</title>
+</head>
+<body>
+  <h1>TechMart Online Store</h1>
+  <h2>Checkout & Delivery Form</h2>
+  <p>
+    Thank you for shopping with <strong>TechMart</strong>!  
+    Please review your selected products and fill in your delivery and payment details below.  
+    Fields marked with <mark>*</mark> are mandatory.
+  </p>
+  <hr>
+
+  <h3>🛍️ Selected Products</h3>
+  <table border="1">
+    <caption>Your Order Summary</caption>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Unit Price (₹)</th>
+      <th>Total (₹)</th>
+    </tr>
+    <tr><td>Dell Inspiron 15 Laptop</td><td>1</td><td>59,999</td><td>59,999</td></tr>
+    <tr><td>Logitech Wireless Mouse</td><td>2</td><td>899</td><td>1,798</td></tr>
+    <tr><td>HP Laptop Bag</td><td>1</td><td>1,299</td><td>1,299</td></tr>
+    <tr><th colspan="3">Grand Total</th><th>63,096</th></tr>
+  </table>
+  <hr>
+
+  <form action="#" method="post">
+    <h3>👤 Customer Information</h3>
+    <label for="name">Full Name <mark>*</mark>:</label>
+    <input type="text" id="name" name="fullname" required minlength="3"><br><br>
+
+    <label for="email">Email <mark>*</mark>:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mobile">Mobile Number <mark>*</mark>:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+    <hr>
+    <h3>🏠 Delivery Address</h3>
+    <label for="house">House / Street <mark>*</mark>:</label>
+    <input type="text" id="house" name="house" required><br><br>
+
+    <label for="city">City <mark>*</mark>:</label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="state">State <mark>*</mark>:</label>
+    <select id="state" name="state" required>
+      <option value="">--Select State--</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+    </select><br><br>
+
+    <label for="country">Country <mark>*</mark>:</label>
+    <select id="country" name="country" required>
+      <option value="">--Select Country--</option>
+      <option value="India">India</option>
+      <option value="Nepal">Nepal</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="Sri Lanka">Sri Lanka</option>
+    </select><br><br>
+
+    <label for="postal">Postal Code <mark>*</mark>:</label>
+    <input type="number" id="postal" name="postal" min="100000" max="999999" required><br><br>
+
+    <input type="checkbox" id="billing" name="billing">
+    <label for="billing">Billing address same as delivery</label><br><br>
+
+    <hr>
+    <h3>🚚 Delivery Options</h3>
+    <input type="radio" name="delivery" value="Standard" required> Standard (3–5 days)<br>
+    <input type="radio" name="delivery" value="Express"> Express (1–2 days)<br>
+    <input type="radio" name="delivery" value="Same Day"> Same Day Delivery (₹199 extra)<br><br>
+
+    <label for="instructions">Delivery Instructions:</label><br>
+    <textarea id="instructions" name="instructions" rows="4" cols="40" placeholder="Add any special delivery notes..."></textarea><br><br>
+
+    <hr>
+    <h3>💳 Payment Details</h3>
+    <input type="radio" name="payment" value="Card" required> Credit/Debit Card<br>
+    <input type="radio" name="payment" value="COD"> Cash on Delivery<br>
+    <input type="radio" name="payment" value="UPI"> UPI / Online Payment<br><br>
+
+    <label for="cardname">Card Holder Name:</label>
+    <input type="text" id="cardname" name="cardname"><br><br>
+
+    <label for="cardnum">Card Number:</label>
+    <input type="text" id="cardnum" name="cardnum" pattern="[0-9]{16}" maxlength="16"><br><br>
+
+    <label for="expiry">Expiry Date:</label>
+    <input type="month" id="expiry" name="expiry"><br><br>
+
+    <label for="cvv">Security Code (CVV):</label>
+    <input type="password" id="cvv" name="cvv" pattern="[0-9]{3}" maxlength="3"><br><br>
+
+    <label for="coupon">Coupon Code:</label>
+    <input type="text" id="coupon" name="coupon" maxlength="10" placeholder="e.g., SAVE10"><br><br>
+
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the Terms & Conditions.</label><br><br>
+
+    <input type="checkbox" id="confirm" name="confirm" required>
+    <label for="confirm">I confirm that the order details are correct.</label><br><br>
+
+    <input type="submit" value="Place Order">
+    <input type="reset" value="Reset Form">
+  </form>
+  <hr>
+
+  <p>
+    <a href="https://www.techmart.in" target="_blank" title="Continue Shopping">Continue Shopping</a>
+  </p>
+  <img src="https://techmartme.com/wp-content/uploads/2023/01/mall-of-egypt-scaled.jpg" alt="techmart" width="500">
+  <hr>
+
+  <blockquote>
+    “At TechMart, we deliver quality products with speed and trust — your satisfaction is our priority.”
+  </blockquote>
+</body>
+</html>

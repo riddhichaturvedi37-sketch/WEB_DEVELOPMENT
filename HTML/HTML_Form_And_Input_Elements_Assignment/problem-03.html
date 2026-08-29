@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Course Enrollment & Student Registration</title>
+</head>
+<body>
+  <h1>TechLearn Academy - Course Enrollment Form</h1>
+  <p>
+    Welcome to <strong>TechLearn Academy</strong>.  
+    Please fill out this form to register for your preferred technical course.  
+    Fields marked with <mark>*</mark> are mandatory.
+  </p>
+  <hr>
+
+  <form action="#" method="post">
+    <h2>Student Information</h2>
+    <label for="name">Full Name <mark>*</mark>:</label>
+    <input type="text" id="name" name="fullname" required minlength="3"><br><br>
+
+    <label for="email">Email <mark>*</mark>:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password <mark>*</mark>:</label>
+    <input type="password" id="password" name="password" required minlength="6" maxlength="12"><br><br>
+
+    <label for="mobile">Mobile Number <mark>*</mark>:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+    <label for="dob">Date of Birth <mark>*</mark>:</label>
+    <input type="date" id="dob" name="dob" min="1990-01-01" max="2010-12-31" required><br><br>
+
+    <hr>
+    <h2>Course Selection</h2>
+    <label for="course">Select Course <mark>*</mark>:</label>
+    <select id="course" name="course" required>
+      <option value="">--Choose Course--</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Data Structures & Algorithms">Data Structures & Algorithms</option>
+      <option value="Python Programming">Python Programming</option>
+      <option value="Java Development">Java Development</option>
+      <option value="Database Management">Database Management</option>
+      <option value="Machine Learning Basics">Machine Learning Basics</option>
+    </select><br><br>
+
+    <label for="batch">Select Batch/Session <mark>*</mark>:</label>
+    <select id="batch" name="batch" required>
+      <option value="">--Choose Batch--</option>
+      <option value="Morning Batch (9 AM – 12 PM)">Morning Batch (9 AM – 12 PM)</option>
+      <option value="Afternoon Batch (1 PM – 4 PM)">Afternoon Batch (1 PM – 4 PM)</option>
+      <option value="Evening Batch (5 PM – 8 PM)">Evening Batch (5 PM – 8 PM)</option>
+      <option value="Weekend Batch (Sat‑Sun)">Weekend Batch (Sat‑Sun)</option>
+    </select><br><br>
+
+    <label>Learning Mode <mark>*</mark>:</label>
+    <input type="radio" name="mode" value="Online" required> Online
+    <input type="radio" name="mode" value="Offline"> Offline
+    <input type="radio" name="mode" value="Hybrid"> Hybrid<br><br>
+
+    <label>Preferred Topics:</label><br>
+    <input type="checkbox" name="topic" value="Java"> Java
+    <input type="checkbox" name="topic" value="Python"> Python
+    <input type="checkbox" name="topic" value="Web Development"> Web Development
+    <input type="checkbox" name="topic" value="Data Structures"> Data Structures
+    <input type="checkbox" name="topic" value="Database"> Database<br><br>
+
+    <hr>
+    <h2>Academic Background</h2>
+    <label for="education">Education Level <mark>*</mark>:</label>
+    <input type="text" id="education" name="education" placeholder="e.g., B.Tech in Computer Science" required><br><br>
+
+    <label for="college">College/Institution Name <mark>*</mark>:</label>
+    <input type="text" id="college" name="college" required><br><br>
+
+    <label for="semester">Current Semester/Year <mark>*</mark>:</label>
+    <input type="number" id="semester" name="semester" min="1" max="8" required><br><br>
+
+    <label for="experience">Programming Experience (in years):</label>
+    <input type="number" id="experience" name="experience" min="0" max="10" step="0.5"><br><br>
+
+    <label for="portfolio">GitHub / Portfolio URL:</label>
+    <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/username"><br><br>
+
+    <label for="goals">Learning Goals:</label><br>
+    <textarea id="goals" name="goals" rows="4" cols="40" placeholder="Describe what you aim to achieve..."></textarea><br><br>
+
+    <input type="checkbox" id="confirm" name="confirm" required>
+    <label for="confirm">I confirm that the information provided is accurate and complete.</label><br><br>
+
+    <input type="submit" value="Submit Registration">
+    <input type="reset" value="Reset Form">
+  </form>
+  <hr>
+
+  <p>
+    Learn more about our courses at 
+    <a href="https://www.techlearnacademy.in" target="_blank" title="TechLearn Academy Official Website">techlearnacademy.in</a>
+  </p>
+
+  <img src="course-banner.jpg" alt="Online Course Banner" width="400">
+  <hr>
+
+  <blockquote>
+    “Empower your future with knowledge and skills that shape tomorrow’s technology.”
+  </blockquote>
+</body>
+</html>

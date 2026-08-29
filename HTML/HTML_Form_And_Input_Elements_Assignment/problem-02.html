@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clinic Appointment Booking Form</title>
+</head>
+<body>
+  <h1>CityCare Hospital Appointment Form</h1>
+  <p>
+    Welcome to <strong>CityCare Hospital</strong>.  
+    Please fill out this form to book your appointment.  
+    Fields marked with <mark>*</mark> are mandatory.
+  </p>
+  <hr>
+
+  <form action="#" method="post">
+    <h2>Patient Information</h2>
+    <label for="name">Full Name <mark>*</mark>:</label>
+    <input type="text" id="name" name="fullname" required minlength="3"><br><br>
+
+    <label for="email">Email <mark>*</mark>:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mobile">Mobile Number <mark>*</mark>:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+    <label for="dob">Date of Birth <mark>*</mark>:</label>
+    <input type="date" id="dob" name="dob" min="1950-01-01" max="2015-12-31" required><br><br>
+
+    <label for="patientid">Patient ID (optional):</label>
+    <input type="text" id="patientid" name="patientid" maxlength="10"><br><br>
+
+    <hr>
+    <h2>Appointment Details</h2>
+    <label for="date">Preferred Date <mark>*</mark>:</label>
+    <input type="date" id="date" name="appointment_date" required><br><br>
+
+    <label for="time">Preferred Time <mark>*</mark>:</label>
+    <input type="time" id="time" name="appointment_time" required><br><br>
+
+    <label for="doctor">Select Doctor <mark>*</mark>:</label>
+    <select id="doctor" name="doctor" required>
+      <option value="">--Choose Doctor--</option>
+      <option value="Dr. Ravi Kishan – Cardiologist">Dr. Ravi Kishan – Cardiologist</option>
+      <option value="Dr. Nitish Sharma – Dermatologist">Dr. Nitish Sharma – Dermatologist</option>
+      <option value="Dr. Krystle D’Souza – Neurologist">Dr. Krystle D’Souza – Neurologist</option>
+      <option value="Dr. Ravie Dubey – Orthopedic">Dr. Ravie Dubey – Orthopedic</option>
+      <option value="Dr. Yashika Sharma – General Physician">Dr. Yashika Sharma – General Physician</option>
+    </select><br><br>
+
+    <label>Visit Type <mark>*</mark>:</label>
+    <input type="radio" name="visit" value="New Patient" required> New Patient
+    <input type="radio" name="visit" value="Follow‑up"> Follow‑up
+    <input type="radio" name="visit" value="Consultation"> Consultation
+    <input type="radio" name="visit" value="Emergency"> Emergency<br><br>
+
+    <label>Preferred Communication Method:</label>
+    <input type="checkbox" name="contact" value="Email"> Email
+    <input type="checkbox" name="contact" value="Phone"> Phone
+    <input type="checkbox" name="contact" value="SMS"> SMS<br><br>
+
+    <label for="reason">Reason for Visit / Additional Information:</label><br>
+    <textarea id="reason" name="reason" rows="4" cols="40" placeholder="Describe your symptoms or concerns..."></textarea><br><br>
+
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the hospital’s appointment terms and privacy policy.</label><br><br>
+
+    <input type="submit" value="Book Appointment">
+    <input type="reset" value="Reset Form">
+  </form>
+  <hr>
+
+  <h2>Clinic Timings</h2>
+  <table border="1">
+    <caption>CityCare Hospital Working Hours</caption>
+    <tr><th>Day</th><th>Opening Time</th><th>Closing Time</th></tr>
+    <tr><td>Monday – Friday</td><td>9:00 AM</td><td>6:00 PM</td></tr>
+    <tr><td>Saturday</td><td>9:00 AM</td><td>2:00 PM</td></tr>
+    <tr><td>Sunday</td><td colspan="2">Closed</td></tr>
+  </table>
+  <hr>
+
+  <p>
+    For emergency assistance, visit our website:  
+    <a href="https://www.citycarehospital.in" target="_blank" title="CityCare Hospital Official Website">citycarehospital.in</a>
+  </p>
+
+  <blockquote>
+    “Your health is our priority. We strive to provide timely care and compassion to every patient.”
+  </blockquote>
+</body>
+</html>

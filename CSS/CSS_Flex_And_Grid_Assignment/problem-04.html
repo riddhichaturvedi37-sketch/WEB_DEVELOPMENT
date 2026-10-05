@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiring Partners Grid Layout</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .partners-section {
+      background-color: #fff5f5;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .partners-section h3 {
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .partners-section h1 {
+      font-size: 1.8em;
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 logos per row */
+  gap: 30px 40px; /* vertical and horizontal spacing */
+  justify-content: center; /* centers the grid horizontally */
+  align-items: center; /* vertically centers items */
+  margin: 0 auto 50px;
+  max-width: 1200px; /* keeps layout balanced */
+}
+    .partner-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      width: 120px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-card img {
+      max-width: 80px;
+      max-height: 50px;
+      object-fit: contain;
+    }
+
+    .see-more {
+      display: inline-block;
+      background-color: #ff4b5c;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 0.9em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .see-more:hover {
+      background-color: #e63946;
+    }
+
+    @media (max-width: 768px) {
+      .partners-section h1 {
+        font-size: 1.5em;
+      }
+      .partner-card {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="partners-section">
+    <h3>Have a Dream Company In Mind?</h3>
+    <h1>Meet Our 700+ Hiring Partners</h1>
+
+    <div class="partners-grid">
+      <div class="partner-card"><img src="https://images.financialexpressdigital.com/2020/12/Eatfit.jpg" alt="Eatfit"></div>
+      <div class="partner-card"><img src="https://www.pngplay.com/wp-content/uploads/6/Dream11-Logo-PNG-Clipart-Background.png" alt="Dream11"></div>
+      <div class="partner-card"><img src="https://assets-global.website-files.com/62458251a5559067512bba0b/65f15859d5d0db2fe651e93f_urbanpiper-open-graph.jpg" alt="Urban Piper"></div>
+      <div class="partner-card"><img src="https://cdn.freelogovectors.net/wp-content/uploads/2021/07/airmeet-logo-freelogovectors.net_.png" alt="Airmeet"></div>
+      <div class="partner-card"><img src="https://brandlogovector.com/wp-content/uploads/2021/05/Paytm-Logo-Small.png" alt="Paytm"></div>
+      <div class="partner-card"><img src="https://gumlet.assettype.com/digitalterminal/import/uploads/news/1628001083s_WhiteHat-Jr.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true" alt="WhiteHat Jr"></div>
+      <div class="partner-card"><img src="https://tse4.mm.bing.net/th/id/OIP.9SMCka48iFvzy_pcRPdOZQHaCO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="BharatPe"></div>
+      <div class="partner-card"><img src="https://www.livemint.com/lm-img/img/2024/10/01/1600x900/Swiggy_Orange_Horizontal_1727778844943_1727778848427.png" alt="Swiggy"></div>
+      <div class="partner-card"><img src="https://cdn.techjockey.com/web/assets/images/techjockey/products/10918_vyapar_logo.png" alt="Vyapar"></div>
+      <div class="partner-card"><img src="https://nandiniinfosys.com/wp-content/uploads/2022/07/PagarBook-1024x536.jpg" alt="PagarBook"></div>
+      <div class="partner-card"><img src="https://assets.thehansindia.com/h-upload/2022/03/29/1284203-smallcase.webp" alt="Smallcase"></div>
+      <div class="partner-card"><img src="https://logowik.com/content/uploads/images/sharechat3846.jpg" alt="ShareChat"></div>
+      <div class="partner-card"><img src="https://tse1.mm.bing.net/th/id/OIP.uo7iI1fGELR9dscNlfPbOgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ola"></div>
+      <div class="partner-card"><img src="https://th.bing.com/th/id/ODF.qRfe1gHKjRnm95ZrqwoQJA?pid=ImgDet&w=32&h=32&dpr=1.3&o=7" alt="IBM"></div>
+      <div class="partner-card"><img src="https://logos-world.net/wp-content/uploads/2021/08/Byjus-Logo.png" alt="BYJU'S"></div>
+      <div class="partner-card"><img src="https://www.financialexpress.com/wp-content/uploads/2024/02/Shailja-Tiwari-10.png" alt="Ajio"></div>
+    </div>
+
+    <button class="see-more">SEE MORE PARTNERS ›</button>
+  </section>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Problem 4</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #dce1e7;
+      font-family: serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "a a b"
+        "c d d"
+        "e e e";
+      gap: 15px;
+      width: 800px;
+      height: 500px;
+    }
+
+    .box {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+    }
+
+    .box-a { grid-area: a; }
+    .box-b { grid-area: b; }
+    .box-c { grid-area: c; }
+    .box-d { grid-area: d; }
+    .box-e { grid-area: e; }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="box box-a">A</div>
+    <div class="box box-b">B</div>
+    <div class="box box-c">C</div>
+    <div class="box box-d">D</div>
+    <div class="box box-e">E</div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+

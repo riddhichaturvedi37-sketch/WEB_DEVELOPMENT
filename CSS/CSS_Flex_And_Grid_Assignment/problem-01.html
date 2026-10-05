@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLA In The News</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4ff; /* light blue background */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Section heading */
+    .news-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .news-section h1 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    /* Flex layout for news cards */
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .news-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 25px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Default heading style */
+    .news-card h3 {
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    /* Economic Times style */
+    .news-card:nth-child(1) h3 {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: #222;
+    }
+
+    /* moneycontrol style */
+    .news-card:nth-child(2) h3 {
+      text-transform: lowercase;
+      font-size: 1.2em;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #333;
+    }
+
+    /* VCCIRCLE style */
+    .news-card:nth-child(3) h3 {
+      text-transform: uppercase;
+      font-family: 'Arial Narrow', sans-serif;
+      font-size: 1.3em;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #111;
+    }
+
+    .news-card small {
+      display: block;
+      color: #007b8f;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .news-card p {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .see-more {
+      display: inline-block;
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .see-more:hover {
+      background-color: #d62828;
+    }
+
+    /* Grid layout for investors */
+    .investor-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff;
+      margin-top: 40px;
+    }
+
+    .investor-section h2 {
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .investor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .investor-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 200px;   /* slightly wider */
+      height: 110px;  /* taller for bigger logos */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .investor-card img {
+      max-width: 100%;
+      max-height: 90px; /* increased size */
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .news-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="news-section">
+    <h1>GLA In The News</h1>
+
+    <div class="news-container">
+      <div class="news-card">
+        <h3>The Economic Times</h3>
+        <small>21 Dec 2021</small>
+        <p>Edtech startup GLA University acquires data analytics firm Propelld for $1 million.</p>
+        <p>With their latest acquisition, GLA University moves one step closer to becoming...</p>
+      </div>
+
+      <div class="news-card">
+        <h3>moneycontrol</h3>
+        <small>26 Oct 2021</small>
+        <p>Kunal Shah, Vijay Shekhar Sharma, Amrish Rau among 21 angel investors in GLA University.</p>
+        <p>GLA University is aiming to expand to 20 smaller cities by March 2022 and...</p>
+      </div>
+
+      <div class="news-card">
+        <h3>VCCIRCLE</h3>
+        <small>18 Aug 2020</small>
+        <p>Unitus Ventures leads pre-Series A funding for coding-focused GLA University.</p>
+        <p>Software coding platform GLA University has raised $2.5 million (Rs 18.6 crore) in...</p>
+      </div>
+    </div>
+
+    <button class="see-more">SEE MORE ›</button>
+  </section>
+
+  <section class="investor-section">
+    <h2>Our Investors, Who Believe In Us</h2>
+    <div class="investor-grid">
+      <div class="investor-card">
+        <img src="https://techstartups.com/wp-content/uploads/2018/05/Unitus-Ventures.jpg" alt="Unitus Ventures">
+      </div>
+      <div class="investor-card">
+        <img src="https://thestorywatch.com/wp-content/uploads/2023/12/omidyar-network-india-logo-300x162.png" alt="Omidyar Network India">
+      </div>
+      <div class="investor-card">
+        <img src="https://media.telanganatoday.com/wp-content/uploads/2021/02/India-Quotient.jpg" alt="IndiaQuotient">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+

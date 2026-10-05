@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Periodic Table of Elements</title>
+  <style>
+    /* Universal Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* Periodic Table Main Grid (18 columns) */
+    .periodic-table {
+      display: grid;
+      grid-template-columns: repeat(18, 36px);
+      grid-template-rows: repeat(7, 36px);
+      gap: 4px;
+      margin-bottom: 25px;
+    }
+
+    /* Common Element Box Styles */
+    .element {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: bold;
+      color: #000;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .element .num {
+      font-size: 8px;
+      font-weight: normal;
+    }
+
+    .element .symbol {
+      font-size: 12px;
+    }
+
+    /* Color Categories matching the screenshot */
+    .pink       { background-color: #c85a6e; }
+    .green-dark { background-color: #486e38; color: #fff; }
+    .green-light{ background-color: #7da043; }
+    .blue       { background-color: #1e52ba; color: #fff; }
+    .red        { background-color: #cc3333; color: #fff; }
+    .purple     { background-color: #5d2555; color: #fff; }
+    .orange     { background-color: #e67e22; }
+    .brown      { background-color: #4a3b32; color: #fff; }
+    .empty      { border: none; background: transparent; box-shadow: none; }
+    .placeholder{ border: 1px solid #333; background-color: #e0e0e0; }
+
+    /* Special Highlighted Element: Silicon (Si) */
+    .silicon-highlight {
+      grid-column: 13 / span 2;
+      grid-row: 2 / span 2;
+      width: 76px;
+      height: 76px;
+      background-color: #698236;
+      border: 2px solid #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px;
+      font-family: serif;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      z-index: 10;
+    }
+
+    .silicon-highlight .top-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+    }
+
+    .silicon-highlight .symbol-main {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: -4px;
+    }
+
+    .silicon-highlight .name-main {
+      font-size: 9px;
+      text-align: left;
+    }
+
+    /* Bottom Section for Lanthanides and Actinides */
+    .bottom-table {
+      display: grid;
+      grid-template-columns: repeat(15, 36px);
+      grid-template-rows: repeat(2, 36px);
+      gap: 4px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>THE PERIODIC TABLE OF ELEMENTS</h1>
+
+  <!-- Main Periodic Table -->
+  <div class="periodic-table">
+    
+    <!-- Row 1 -->
+    <div class="element pink"><span class="symbol">H</span></div>
+    <div class="element empty" style="grid-column: span 16;"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 2 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">4</span></div>
+    <div class="element empty" style="grid-column: span 10;"></div>
+    <!-- Silicon enlarged overlay element spans here across col 13-14 / row 2-3 -->
+    <div class="element purple"></div>
+    <div class="element green-dark"></div>
+    <div class="element green-dark"></div>
+    <div class="element green-dark"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 3 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">12</span></div>
+    <div class="element empty" style="grid-column: span 10;"></div>
+    
+    <!-- Highlighted Silicon (Si) Box -->
+    <div class="silicon-highlight" style="grid-column: 13 / span 2; grid-row: 2 / span 2;">
+      <div class="top-row">
+        <span></span>
+        <span>14</span>
+      </div>
+      <div class="symbol-main">Si</div>
+      <div class="name-main">Silicon</div>
+    </div>
+
+    <div class="element red"></div>
+    <div class="element purple"></div>
+    <div class="element green-dark"></div>
+    <div class="element green-dark"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 4 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">20</span></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element red"></div>
+    <div class="element purple"></div>
+    <div class="element purple"></div>
+    <div class="element green-dark"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 5 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">38</span></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element red"></div>
+    <div class="element red"></div>
+    <div class="element purple"></div>
+    <div class="element purple"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 6 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">56</span></div>
+    <div class="element placeholder"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element red"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+    <div class="element purple"></div>
+    <div class="element red"></div>
+    <div class="element orange"></div>
+
+    <!-- Row 7 -->
+    <div class="element green-dark"></div>
+    <div class="element pink"><span class="num">88</span></div>
+    <div class="element placeholder"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element blue"></div>
+    <div class="element brown"></div>
+    <div class="element brown"></div>
+    <div class="element brown"></div>
+    <div class="element brown"></div>
+    <div class="element brown"></div>
+    <div class="element brown"></div>
+
+  </div>
+
+  <!-- Bottom Section: Lanthanides and Actinides -->
+  <div class="bottom-table">
+    <!-- Row 1: Lanthanides -->
+    <div class="element green-light"><span class="num">La</span></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+
+    <!-- Row 2: Actinides -->
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"><span class="num">Am</span></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"></div>
+    <div class="element green-light"><span class="num">No</span></div>
+  </div>
+
+</body>
+</html>

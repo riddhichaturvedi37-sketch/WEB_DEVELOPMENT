@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Listing Portal</title>
+  <style>
+    /* 1. Universal Selector */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* 2. Element Selector */
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    /* 3. ID Selector */
+    #movie-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 850px;
+      width: 100%;
+    }
+
+    /* 4. Class Selector */
+    .movie-card {
+      display: flex;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 12px;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .poster {
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .movie-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* 5. Grouping Selector */
+    .btn-book, button {
+      background-color: #d9383a;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    .btn-book:hover {
+      background-color: #b82b2d;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="movie-container">
+    
+    <!-- Card 1: ET (2022) -->
+    <div class="movie-card">
+      <img class="poster" src="https://cdn.posteritati.com/posters/000/000/069/610/et-the-extraterrestrial-md-web.jpg" alt="ET (2022) Poster">
+      <div class="movie-info">
+        <h3>ET (2022)</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+    <!-- Card 2: Jhund -->
+    <div class="movie-card">
+      <img class="poster" src="https://tse4.mm.bing.net/th/id/OIP.sA4G9a6ErCdo_dvcSCkriAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jhund Poster">
+      <div class="movie-info">
+        <h3>Jhund</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+    <!-- Card 3: Gangubai Kathiawadi -->
+    <div class="movie-card">
+      <img class="poster" src="https://th.bing.com/th/id/R.64059b2e6e858ea9a3408e5541b488b3?rik=8ZD1G%2fDPxA0wBQ&riu=http%3a%2f%2fwww.impawards.com%2fintl%2findia%2f2022%2fposters%2fgangubai_kathiawadi_xlg.jpg&ehk=bBGmQ%2bPwH04EYeyWbpQdP3BeB138ytsVuOU7ilFhMXA%3d&risl=&pid=ImgRaw&r=0" alt="Gangubai Kathiawadi Poster">
+      <div class="movie-info">
+        <h3>Gangubai Kathiawadi</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+    <!-- Card 4: Radhe Shyam -->
+    <div class="movie-card">
+      <img class="poster" src="https://tse3.mm.bing.net/th/id/OIP.h4U7_nUkcPnnk1BY3wxYcwHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Radhe Shyam Poster">
+      <div class="movie-info">
+        <h3>Radhe Shyam</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+    <!-- Card 5: Uncharted -->
+    <div class="movie-card">
+      <img class="poster" src="https://assets-prd.ignimgs.com/2022/01/13/uncharted-poster-full-1642086040683.jpg" alt="Uncharted Poster">
+      <div class="movie-info">
+        <h3>Uncharted</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+    <!-- Card 6: The Batman -->
+    <div class="movie-card">
+      <img class="poster" src="https://tse4.mm.bing.net/th/id/OIP.yYW16aTZnCoLymK_gMmS-QHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="The Batman Poster">
+      <div class="movie-info">
+        <h3>The Batman</h3>
+        <p>Releasing on 11 Mar, 2022</p>
+        <button class="btn-book">Book tickets</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

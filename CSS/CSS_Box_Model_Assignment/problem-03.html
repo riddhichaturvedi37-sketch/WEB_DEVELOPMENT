@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Ecosystem Showcase</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Heading and tagline */
+    .brand-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .brand-section h1 {
+      font-size: 3em;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .brand-section p {
+      color: #555;
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+
+    /* Card layout */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    /* Individual card */
+    .card {
+      width: 220px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 25px 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Logo box styling */
+    .logo-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-box img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    /* Card text */
+    .card h3 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #e63946;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Card background colors */
+    .zomato { background: linear-gradient(to bottom, #ffe5e5, #fff); }
+    .blinkit { background: linear-gradient(to bottom, #fff3b0, #fff); }
+    .district { background: linear-gradient(to bottom, #e0c3fc, #fff); }
+    .hyperpure { background: linear-gradient(to bottom, #ffd6d6, #fff); }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="brand-section">
+    <h1>eternal</h1>
+    <p>POWERING INDIA’S CHANGING LIFESTYLES</p>
+
+    <div class="card-container">
+      <!-- Zomato -->
+      <div class="card zomato">
+        <div class="logo-box" style="background-color:#ff4d4d;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" alt="Zomato Logo">
+        </div>
+        <h3>zomato</h3>
+        <p>Get the app now to start ordering your favorite dishes.</p>
+        <a href="#">Check it out ›</a>
+      </div>
+
+      <!-- Blinkit -->
+      <div class="card blinkit">
+        <div class="logo-box" style="background-color:#ffeb3b;">
+          <img src="https://static.vecteezy.com/system/resources/previews/075/195/392/non_2x/blinkit-logo-app-icon-transparent-background-free-png.png" alt="Blinkit Logo">
+        </div>
+        <h3>blinkit</h3>
+        <p>Choose from 30,000+ products & get them delivered at your doorstep.</p>
+        <a href="#">Check it out ›</a>
+      </div>
+
+      <!-- District -->
+      <div class="card district">
+        <div class="logo-box" style="background-color:#9b59b6;">
+          <img src="https://static.vecteezy.com/system/resources/previews/057/355/796/non_2x/district-by-zomato-app-icon-on-transparent-background-free-png.png" alt="District Logo">
+        </div>
+        <h3>district</h3>
+        <p>The best of events, movies, dining, and everything you love!</p>
+        <a href="#">Check it out ›</a>
+      </div>
+
+      <!-- Hyperpure -->
+      <div class="card hyperpure">
+        <div class="logo-box" style="background-color:#ff7b7b;">
+          <img src="https://play-lh.googleusercontent.com/W9H0MIk4xIdL8HNxXd69bJPxezUEISJAzn2YzORu4guBVD-B7CA1FP8RVAIaHSZqqw" alt="Hyperpure Logo">
+        </div>
+        <h3>hyperpure</h3>
+        <p>Offering complete supply chain solution for your restaurant.</p>
+        <a href="#">Check it out ›</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+

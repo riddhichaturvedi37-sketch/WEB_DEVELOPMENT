@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem 4 - All Screen Views</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      background-color: #f4f4f9;
+    }
+
+    .preview-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      width: 100%;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    /* Common layout styles */
+    .grid-base {
+      display: grid;
+      gap: 15px;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #ffff00; /* Yellow */
+      padding: 15px 20px;
+      font-size: 1.8rem;
+      color: #000;
+    }
+
+    .left-box {
+      grid-area: left;
+      background-color: #ff0000; /* Red */
+      color: #700000;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    .right-box {
+      background-color: #00ff00; /* Green */
+      color: #005000;
+      padding: 12px;
+      font-weight: bold;
+      min-height: 70px;
+    }
+
+    .r1 { grid-area: r1; }
+    .r2 { grid-area: r2; }
+    .r3 { grid-area: r3; }
+
+    /* 1. Large Screen Layout */
+    .large-preview {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto repeat(3, 1fr);
+      grid-template-areas:
+        "nav  nav"
+        "left r1"
+        "left r2"
+        "left r3";
+    }
+
+    /* 2. Medium Screen Layout */
+    .medium-preview {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "nav  nav  nav"
+        "left left left"
+        "r1   r2   r3";
+    }
+
+    .medium-preview .left-box {
+      min-height: 180px;
+    }
+
+    /* 3. Small Screen Layout */
+    .small-preview {
+      max-width: 450px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "nav"
+        "left"
+        "r1"
+        "r2"
+        "r3";
+    }
+
+    .small-preview .left-box {
+      min-height: 160px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-wrapper">
+
+    <!-- 1. Large Screen View -->
+    <div class="card">
+      <h2>Large Screen</h2>
+      <div class="grid-base large-preview">
+        <div class="nav">Navigation</div>
+        <div class="left-box">LEFT BOX</div>
+        <div class="right-box r1">RIGHT BOX 1</div>
+        <div class="right-box r2">RIGHT BOX 2</div>
+        <div class="right-box r3">RIGHT BOX 3</div>
+      </div>
+    </div>
+
+    <!-- 2. Medium Screen View -->
+    <div class="card">
+      <h2>Medium Screen</h2>
+      <div class="grid-base medium-preview">
+        <div class="nav">Navigation</div>
+        <div class="left-box">LEFT BOX</div>
+        <div class="right-box r1">RIGHT BOX 1</div>
+        <div class="right-box r2">RIGHT BOX 2</div>
+        <div class="right-box r3">RIGHT BOX 3</div>
+      </div>
+    </div>
+
+    <!-- 3. Small Screen View -->
+    <div class="card">
+      <h2>Small Screen</h2>
+      <div class="grid-base small-preview">
+        <div class="nav">Navigation</div>
+        <div class="left-box">LEFT BOX</div>
+        <div class="right-box r1">RIGHT BOX 1</div>
+        <div class="right-box r2">RIGHT BOX 2</div>
+        <div class="right-box r3">RIGHT BOX 3</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

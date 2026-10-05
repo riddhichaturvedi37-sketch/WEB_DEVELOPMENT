@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Three Screen Layouts</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Container holding all 3 preview cards side-by-side */
+    .preview-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .card h2 {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    /* Common Box Styles */
+    .nav {
+      background-color: yellow;
+      padding: 12px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      padding: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .box1 { background-color: red; }
+    .box2 { background-color: #00ff00; }
+    .box3 { background-color: #5566ff; }
+    .box4 { background-color: #888888; }
+
+    /* -------------------------------------------
+       1. LARGE SCREEN PREVIEW
+    ------------------------------------------- */
+    .large-card {
+      width: 480px;
+    }
+
+    .large-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "nav nav nav nav"
+        "box1 box2 box3 box4";
+    }
+
+    .large-grid .nav { grid-area: nav; margin-bottom: 0; }
+    .large-grid .box1 { grid-area: box1; min-height: 120px; }
+    .large-grid .box2 { grid-area: box2; min-height: 120px; }
+    .large-grid .box3 { grid-area: box3; min-height: 120px; }
+    .large-grid .box4 { grid-area: box4; min-height: 120px; }
+
+    /* -------------------------------------------
+       2. MEDIUM SCREEN PREVIEW
+    ------------------------------------------- */
+    .medium-card {
+      width: 360px;
+    }
+
+    .medium-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "nav nav"
+        "box1 box3"
+        "box2 box4";
+    }
+
+    .medium-grid .nav { grid-area: nav; margin-bottom: 0; }
+    .medium-grid .box1 { grid-area: box1; min-height: 120px; }
+    .medium-grid .box2 { grid-area: box2; min-height: 120px; }
+    .medium-grid .box3 { grid-area: box3; min-height: 120px; }
+    .medium-grid .box4 { grid-area: box4; min-height: 120px; }
+
+    /* -------------------------------------------
+       3. SMALL SCREEN PREVIEW
+    ------------------------------------------- */
+    .small-card {
+      width: 260px;
+    }
+
+    .small-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .small-grid .box {
+      min-height: 70px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Media Query Assignment - All 3 Views</h1>
+
+  <div class="preview-container">
+    
+    <!-- 1. Large Screen View -->
+    <div class="card large-card">
+      <h2>Large Screen (&gt; 900px)</h2>
+      <div class="large-grid">
+        <div class="nav">Navigation</div>
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+      </div>
+    </div>
+
+    <!-- 2. Medium Screen View -->
+    <div class="card medium-card">
+      <h2>Medium Screen (501px - 900px)</h2>
+      <div class="medium-grid">
+        <div class="nav">Navigation</div>
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+      </div>
+    </div>
+
+    <!-- 3. Small Screen View -->
+    <div class="card small-card">
+      <h2>Small Screen (&le; 500px)</h2>
+      <div class="small-grid">
+        <div class="nav">Navigation</div>
+        <div class="box box1">Box 1</div>
+        <div class="box box4">Box 4</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

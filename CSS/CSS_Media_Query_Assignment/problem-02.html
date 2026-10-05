@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IW Assignment-2: Our Specialist & Services</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333333;
+      padding: 40px 20px;
+    }
+
+    /* Section Header Styles */
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      font-size: 0.95rem;
+      color: #666666;
+      line-height: 1.5;
+    }
+
+    /* ===========================================
+       TOP SECTION: OUR SPECIALISTS
+       Uses CSS Grid for container, Flexbox for buttons
+    =========================================== */
+    .top-section-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto 70px auto;
+    }
+
+    .doctor-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .doctor-card > img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .doctor-info {
+      padding: 20px 15px;
+    }
+
+    .doctor-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #222222;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .doctor-info p.subtitle {
+      font-size: 0.75rem;
+      color: #888888;
+      text-transform: uppercase;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .doctor-info p.description {
+      font-size: 0.85rem;
+      color: #666666;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    /* Flexbox used for Buttons Container */
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button-group button {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid #38b6ff;
+      color: #38b6ff;
+    }
+
+    .btn-outline:hover {
+      background-color: #38b6ff;
+      color: #ffffff;
+    }
+
+    .btn-filled {
+      background-color: #ff5252;
+      border: 1px solid #ff5252;
+      color: #ffffff;
+    }
+
+    .btn-filled:hover {
+      background-color: #e04343;
+    }
+
+    /* ===========================================
+       BOTTOM SECTION: SERVICES
+       Uses CSS Grid for container
+    =========================================== */
+    .bottom-section-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .service-card > img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .service-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #222222;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: #666666;
+      line-height: 1.5;
+    }
+
+    /* ===========================================
+       MEDIA QUERIES (GRID BASED)
+    =========================================== */
+
+    /* Medium Screens: 2 cards per row (max-width: 900px) */
+    @media (max-width: 900px) {
+      .top-section-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bottom-section-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Small Screens: 1 card per row (max-width: 550px) */
+    @media (max-width: 550px) {
+      .top-section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-section-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP SECTION ================= -->
+  <section class="section-header">
+    <h2>Our Specialist</h2>
+    <p>Green above he cattle god saw day multiply under fill in the cattle fowl all living, tree word link available in the service for residue fruit.</p>
+  </section>
+
+  <div class="top-section-grid">
+    <!-- Doctor Card 1 -->
+    <div class="doctor-card">
+      <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Ethel Davis">
+      <div class="doctor-info">
+        <h3>Ethel Davis</h3>
+        <p class="subtitle">Sr. Faculty Data Science</p>
+        <p class="description">If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+        <div class="button-group">
+          <button class="btn-outline">Know More</button>
+          <button class="btn-filled">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor Card 2 -->
+    <div class="doctor-card">
+      <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Dand Mories">
+      <div class="doctor-info">
+        <h3>Dand Mories</h3>
+        <p class="subtitle">Sr. Faculty Plastic Surgery</p>
+        <p class="description">If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+        <div class="button-group">
+          <button class="btn-outline">Know More</button>
+          <button class="btn-filled">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor Card 3 -->
+    <div class="doctor-card">
+      <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Align Board">
+      <div class="doctor-info">
+        <h3>Align Board</h3>
+        <p class="subtitle">Sr. Faculty Plastic Surgery</p>
+        <p class="description">If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+        <div class="button-group">
+          <button class="btn-outline">Know More</button>
+          <button class="btn-filled">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor Card 4 -->
+    <div class="doctor-card">
+      <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Jeson Limit">
+      <div class="doctor-info">
+        <h3>Jeson Limit</h3>
+        <p class="subtitle">Sr. Faculty Plastic Surgery</p>
+        <p class="description">If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+        <div class="button-group">
+          <button class="btn-outline">Know More</button>
+          <button class="btn-filled">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= BOTTOM SECTION ================= -->
+  <div class="bottom-section-grid">
+    <!-- Service Card 1 -->
+    <div class="service-card">
+      <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="Teeth Whitening">
+      <h4>Teeth Whitening</h4>
+      <p>In pretium neque a libero congue. Elit diam lectus. Praesent lacinia vitae sit mattis mollis maximus.</p>
+    </div>
+
+    <!--

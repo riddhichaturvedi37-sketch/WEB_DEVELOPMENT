@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem 5 - Our Investors</title>
+  <style>
+    /* Reset & General Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f9fa;
+      color: #333333;
+      padding: 50px 20px;
+    }
+
+    /* Section Heading */
+    .investors-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .investors-section > h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 40px;
+    }
+
+    /* Investors Grid */
+    .investors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Default Large Screen: 4 columns */
+      gap: 25px;
+    }
+
+    /* Individual Investor Card */
+    .investor-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .investor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .investor-card > img.avatar {
+      width: 100%;
+      max-width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .investor-card > h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+
+    .investor-card > p.role {
+      font-size: 0.9rem;
+      color: #666666;
+      margin-bottom: 15px;
+      min-height: 38px;
+    }
+
+    .investor-card > img.company-logo {
+      height: 30px;
+      object-fit: contain;
+      max-width: 120px;
+    }
+
+    /* ===========================================
+       MEDIA QUERIES FOR RESPONSIVENESS
+    =========================================== */
+
+    /* Medium Screens: 2 columns */
+    @media (max-width: 900px) {
+      .investors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Small Screens: 1 column */
+    @media (max-width: 600px) {
+      .investors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        padding: 30px 15px;
+      }
+
+      .investors-section > h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="investors-section">
+    <h2>Strategic Investors</h2>
+
+    <div class="investors-grid">
+
+      <!-- Investor Card 1 -->
+      <div class="investor-card">
+        <img class="avatar" src="https://cdn.techinasia.com/wp-content/uploads/2016/11/Vijay-Shekhar-Sharma.jpg" alt="Vijay Shekhar Sharma">
+        <h3>Vijay Shekhar Sharma</h3>
+        <p class="role">Founder & CEO</p>
+        <img class="company-logo" src="https://i.pinimg.com/originals/ba/e1/c8/bae1c8ff879da79ded9eb74cfea0e1ec.jpg" alt="Paytm">
+      </div>
+
+      <!-- Investor Card 2 -->
+      <div class="investor-card">
+        <img class="avatar" src="https://trak.in/stories/wp-content/uploads/2023/01/Untitled-design-768x357.jpeg" alt="Kunal Shah">
+        <h3>Kunal Shah</h3>
+        <p class="role">Founder</p>
+        <img class="company-logo" src="https://play-lh.googleusercontent.com/DJOgxg1LVR9J1mZiUbwz_408-OIpYYqUlhNLXPRNO2KTCRRl9Cx83hsWMhzm3vB243uy=w3840-h2160" alt="Cred">
+      </div>
+
+      <!-- Investor Card 3 -->
+      <div class="investor-card">
+        <img class="avatar" src="https://plcorp-cdn.pinelabs.com/2025/04/amrish-rau.jpg" alt="Amrish Rau">
+        <h3>Amrish Rau</h3>
+        <p class="role">CEO</p>
+        <img class="company-logo" src="https://tse3.mm.bing.net/th/id/OIP.nEpDW45vmjJzYpvIpPLKkwHaD4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pine Labs">
+      </div>
+
+      <!-- Investor Card 4 -->
+      <div class="investor-card">
+        <img class="avatar" src="https://www.digitalcreed.in/wp-content/uploads/2018/10/Sampad-Swain-CEO-Co-founder-Instamojo_Fotor.jpg" alt="Sampad Swain">
+        <h3>Sampad Swain</h3>
+        <p class="role">Co-Founder & CEO</p>
+        <img class="company-logo" src="https://www.pixelmattic.com/wp-content/uploads/2016/03/instamojo-logo-transparent.f72c38aeba76-1.png" alt="Instamojo">
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
